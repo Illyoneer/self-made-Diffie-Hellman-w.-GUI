@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forSIBSUTI.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="630.0">
+         <children>
+            <TitledPane animated="false" layoutX="14.0" layoutY="-71.0" text="untitled" />
+            <Label layoutX="40.0" layoutY="40.0" text="ВВЕДИТЕ ЧИСЛО &quot;P&quot;" />
+            <Label layoutX="143.0" layoutY="71.0" text="Общие числа" />
+            <TextField fx:id="simpleG_text" alignment="CENTER" layoutX="236.0" layoutY="60.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="215.0" layoutY="40.0" text="ВВЕДИТЕ ЧИСЛО &quot;G&quot;" />
+            <Label layoutX="73.0" layoutY="14.0" text="Необходимо использовать простые числа" />
+            <TextField fx:id="alicePrivateKey_text" alignment="CENTER" layoutX="60.0" layoutY="197.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="50.0" layoutY="177.0" text="Пользователь 1" />
+            <Label layoutX="132.0" layoutY="208.0" text="Приватные числа" />
+            <TextField fx:id="simpleP_text" alignment="CENTER" layoutX="60.0" layoutY="60.0" prefHeight="39.0" prefWidth="65.0" />
+            <TextField fx:id="bobPrivateKey_text" alignment="CENTER" layoutX="236.0" layoutY="197.0" prefHeight="39.0" prefWidth="65.0" />
+            <Button fx:id="generate_button" layoutX="90.0" layoutY="295.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="180.0" text="Сгенерировать">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="95.0" layoutY="103.0" text="Доступны для передачи по сети" />
+            <Label layoutX="225.0" layoutY="177.0" text="Пользователь 2" />
+            <Label layoutX="95.0" layoutY="256.0" text="Хранятся только у пользователей" />
+            <TextField fx:id="aliceGenPrivateKey_text" alignment="CENTER" editable="false" layoutX="60.0" layoutY="388.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="130.0" layoutY="410.0" text="Приватные ключи" />
+            <TextField fx:id="bobGenPrivateKey_text" alignment="CENTER" editable="false" layoutX="236.0" layoutY="388.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="225.0" layoutY="369.0" text="Пользователь 2" />
+            <Label layoutX="50.0" layoutY="369.0" text="Пользователь 1" />
+            <Label layoutX="130.0" layoutY="388.0" text="Сгенерированные" />
+            <Label layoutX="52.0" layoutY="432.0" text="Используются для генерации секретных ключей" />
+            <TextField fx:id="aliceGenSecretKey_text" alignment="CENTER" editable="false" layoutX="60.0" layoutY="500.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="131.0" layoutY="522.0" text="Секретные ключи" />
+            <TextField fx:id="bobGenSecretKey_text" alignment="CENTER" editable="false" layoutX="236.0" layoutY="500.0" prefHeight="39.0" prefWidth="65.0" />
+            <Label layoutX="225.0" layoutY="481.0" text="Пользователь 2" />
+            <Label layoutX="50.0" layoutY="481.0" text="Пользователь 1" />
+            <Label layoutX="130.0" layoutY="500.0" text="Сгенерированные" />
+            <Label layoutX="23.0" layoutY="547.0" text="Используются для передачи сообщений с шифрованием" />
+            <Label layoutX="15.0" layoutY="120.0" text="Используются для генерации приватных и секретных ключей" />
+            <Label layoutX="50.0" layoutY="240.0" text="Используются для генерации приватных ключей" />
+            <Label layoutX="119.0" layoutY="159.0" text="ВВЕДИТЕ ЧИСЛА ДЛЯ:" />
+            <Label layoutX="137.0" layoutY="569.0" text="Ilya Glushko 2021" textFill="#00000096" />
+            <Button fx:id="simple_num_button" layoutX="435.0" layoutY="60.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="127.0" text="ПРОСТЫЕ ЧИСЛА">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="429.0" layoutY="40.0" text="Просмотр простых чисел" />
+            <Label layoutX="400.0" layoutY="125.0" text="Формула расчета приватного ключа&#10;для первого пользователя, &#10;где X - его приватное число " textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="180.0" text="G^X mod P">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="272.0" text="G^Y mod P">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="217.0" text="Формула расчета приватного ключа&#10;для второго пользователя, &#10;где Y - его приватное число " textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="312.0" text="Формула расчета секретного ключа&#10;для первого пользователя, &#10;где kX - секретный ключ &#10;второго пользователя,&#10;а Y - его приватный ключ&#10; " textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="447.0" layoutY="400.0" text="kX^Y mod P">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="401.0" layoutY="439.0" text="Формула расчета секретного ключа&#10;для второго пользователя, &#10;где kY - секретный ключ &#10;первого пользователя,&#10;а X - его приватный ключ&#10; " textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="447.0" layoutY="527.0" text="kY^X mod P">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="449.0" text="Доступны для передачи по сети" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
